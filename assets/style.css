@@ -49,12 +49,14 @@
     color: #fff;
     border-bottom:30px #879274;
   }
+  ​
   
   main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
+  ​
   
   section {
     flex: 0 auto;
@@ -83,11 +85,11 @@
     margin: auto;
     padding: 20px;
   }
-  
+  ​
   .word-blanks {
     line-height: 360px;
   }
-  
+  ​
   .large-font {
     font-size: 3.5em;
     text-align:center;
