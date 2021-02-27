@@ -3,20 +3,28 @@ var losses = document.querySelector(".lose");
 var start = document.querySelector(".start-button");
 var reset = document.querySelector(".reset-button");
 var word = document.querySelector("#wordSpace");
+var wordToGuess;
 var guess;
 
 var words = ["apple", "orange", "javascript", "pencil", "john", "random", "hummingbird", "cappuccino"];
 
 start.addEventListener("click", function(){
-    var guess = words[Math.floor(Math.random()* words.length)];
-    console.log(word);
+    wordToGuess = words[Math.floor(Math.random()* words.length)];
     var spaces = [];
+    console.log(wordToGuess);
 
-    for(i=0; i<guess.length; i++){
+    for(i=0; i<wordToGuess.length; i++){
         spaces.push("_ ");
     }
-    console.log(spaces.join(''));
     word.textContent = spaces.join('');
+
+    for(i=0; i<wordToGuess.length; i++){
+        console.log(spaces[i]);
+        console.log(wordToGuess[i]);
+        if(guess = wordToGuess[i]){
+            spaces[i] = wordToGuess[i];
+        }
+    }
 });
 
 reset.addEventListener("click", function(){
@@ -27,6 +35,8 @@ reset.addEventListener("click", function(){
 function keyGuess(event){
     var key = event.key.toString();
     guess = key;
+    console.log(guess);
+    console.log
 }
 
 document.addEventListener("keydown", keyGuess);
